@@ -1,0 +1,263 @@
+@charset 'UTF-8';
+
+//スペース
+.padding {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+//section title
+.title_dark {
+  position: relative;
+  color: $dark;
+  font-size: 3.0rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  &::after {
+    @include under_line_after(5%,0,0,-2.5rem,3px,$mint);
+    margin: 0 auto;
+  }
+}
+.title_white {
+  position: relative;
+  color: $white;
+  font-size: 3.0rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  &::after {
+    @include under_line_after(5%,0,0,-2.5rem,3px,$mint);
+    margin: 0 auto;
+  }
+}
+//fontawesome
+.fas,.fab,.far {
+  font-size: 5.5rem;
+  color: $mint;
+  padding: 3rem 0;
+}
+//button
+.button {
+  background-color: $mint;
+  transition: background-color 0.3s;
+  border-radius: 0;
+  font-size: 2rem;
+  color: white;
+  padding: 1rem 1.5rem;
+  a {
+    @include LinkColor(white,white);
+  }
+  &:hover {
+    background-color: desaturate($mint,20%);
+  }
+}
+
+
+//--navigation--
+.navbar {
+  padding: 1rem;
+  background-color: rgba($bg-navigation,0.7);
+  letter-spacing: .1rem;
+}
+.navbar .container {
+  @media(min-width: 1200px) {
+    max-width: initial;
+  }
+}
+.navbar-expand-md .navbar-nav .nav-link {
+  padding-right: 2rem;
+}
+.navbar-dark .navbar-nav .nav-link {
+  font-size: 1.6rem;
+  &:hover {
+    color: $mint;
+  }
+}
+.navbar-dark .navbar-nav .nav-link.active  {
+  color: $mint;
+}
+.navbar-toggler {
+  font-size: 2.5rem;
+}
+//landing Page
+.home-inner {
+  background-image: url('../img/computers.png');
+}
+.caption {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  max-width: 100%;
+  text-transform: uppercase;
+  color: white;
+  @include sp() {
+    top: 7%;
+  }
+  h1,h3 {
+    text-shadow: 1px 1px 10px black;
+    margin-bottom: 3.5rem;
+    @include sp() {
+      margin-bottom: 2.5rem;
+    }
+  }
+  h1 {
+    font-size: 5.6rem;
+    letter-spacing: 0.5rem;
+    font-weight: bold;
+    @include sp() {
+      font-size: 3.5rem;
+    }
+  }
+  h3 {
+    font-size: 3.0rem;
+    @include sp() {
+      font-size: 2rem;
+    }
+  }
+  .btn {
+    border: solid 2px white;
+  }
+  .btn-lg {
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 0;
+  }
+}
+//cource section--
+#cource {
+  h2 {
+    font-size: 3.5rem;
+    colot: $white;
+    letter-spacing: .1rem;
+    margin-bottom: 2.5rem;
+  }
+  p {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+  button {
+    @extend .button;
+  }
+}
+//feature section
+#feature {
+  h4 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
+//resources
+#resources {
+  position: relative;
+  height: 57.5rem;
+  @include sp() {
+    height: 100rem;
+  }
+  .home-inner {
+    background-image: url('../img/apple.png');
+    .bg {
+      background-color: rgba(black,0.8);
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.resources-caption {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  max-width: 100%;
+  color: $white;
+  @include sp() {
+    top: 42%
+  }
+  h4 {
+    font-size: 3.0rem;
+    margin-top: 3rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+}
+//clients
+#clients {
+  background-color: $clients;
+}
+.client-box  {
+  padding: 6rem 1rem;
+  @include sp() {
+    text-align: center;
+    &:last-child {
+      padding-top: 0;
+    }
+  }
+  blockquote {
+    line-height: 2.5rem;
+    padding: 1rem 3rem;
+    .fa-quote-left {
+      font-size: 2rem;
+      padding: 1rem;
+    }
+  }
+}
+.img-clients {
+  width: 30%;
+  @include sp() {
+    width: 50%;
+  }
+}
+.clients-hr {
+  background-color: $mint;
+}
+//cource section
+.cource2 {
+  h5 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+  button {
+    @extend .button;
+  }
+}
+//contact
+#contact {
+  background-color: $footer;
+  color: white;
+  p:not(:first-child) {
+    margin: 0;
+  }
+  border-bottom: 3px solid #666B71;
+}
+.img-contact {
+  width: 188px;
+  margin-bottom: 3rem;
+}
+.contact-box {
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      padding: 0 1rem;
+    }
+  }
+}
+.fa-facebook,.fa-twitter,.fa-instagram {
+  font-size: 2.7rem;
+  color: white;
+  &:hover {
+    color: $mint;
+  }
+}
+//footer
+footer {
+  background-color: $footer;
+  p {
+    color: white;
+  }
+}
+
+
+
